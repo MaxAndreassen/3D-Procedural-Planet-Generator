@@ -3,18 +3,42 @@
 [System.Serializable]
 public class NoiseSettings
 {
-    public float strength = 1;
+    public enum FilterType
+    {
+        Simple,
+        Rigid
+    };
 
-    [Range(1, 8)]
-    public int numLayers = 1;
+    public FilterType filterType;
 
-    public float baseRoughness = 1;
+    [ConditionalHide("filterType", 0)]
+    public SimpleNoiseSettings simpleNoiseSettings;
 
-    public float roughness = 2;
+    [ConditionalHide("filterType", 1)]
+    public RigidNoiseSettings rigidNoiseSettings;
 
-    public float persistence = 0.5f;
+    [System.Serializable]
+    public class SimpleNoiseSettings
+    {
+        public float strength = 1;
 
-    public Vector3 centre;
+        [Range(1, 8)]
+        public int numLayers = 1;
 
-    public float minValue;
+        public float baseRoughness = 1;
+
+        public float roughness = 2;
+
+        public float persistence = 0.5f;
+
+        public Vector3 centre;
+
+        public float minValue;
+    }
+
+    [System.Serializable]
+    public class RigidNoiseSettings : SimpleNoiseSettings
+    {
+        public float weightMultiplier = 0.8f;
+    }
 }
