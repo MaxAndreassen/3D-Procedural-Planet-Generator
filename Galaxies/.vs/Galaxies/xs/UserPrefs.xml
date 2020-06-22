@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{B40D8642-3C88-41AC-C506-B48F42D5972C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TerrainFace.cs">
+    <Files>
+      <File FileName="Assets/TerrainFace.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Galaxies" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scenes" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2c25b58e-0410-4661-8e3f-b5b5940c2323" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
