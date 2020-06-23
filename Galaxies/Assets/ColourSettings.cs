@@ -3,5 +3,7 @@
 [CreateAssetMenu]
 public class ColourSettings : ScriptableObject
 {
-    public Color planetColor;
+    public Gradient gradient;
+    public Material planetMaterial;
+
 }
