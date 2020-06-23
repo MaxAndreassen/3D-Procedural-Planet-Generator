@@ -28,6 +28,11 @@ public class Planet : MonoBehaviour
     [HideInInspector]
     public bool colourSettingsFoldout;
 
+    private void Start()
+    {
+        GeneratePlanet();
+    }
+
     void Initialize()
     {
         shapeGenerator.UpdateSettings(shapeSettings);
@@ -85,8 +90,8 @@ public class Planet : MonoBehaviour
         }
     }
 
-    void GenerateMesh() {
-
+    void GenerateMesh()
+    {
         for (var i = 0; i < 6; i++)
         {
             if (meshFilters[i].gameObject.activeSelf)
@@ -101,6 +106,14 @@ public class Planet : MonoBehaviour
     void GenerateColours()
     {
         colourGenerator.UpdateColours();
+
+        for (var i = 0; i < 6; i++)
+        {
+            if (meshFilters[i].gameObject.activeSelf)
+            {
+                terrainFaces[i].UpdateUVs(colourGenerator);
+            }
+        }
     }
 
 }
