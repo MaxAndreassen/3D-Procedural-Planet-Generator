@@ -28,11 +28,6 @@ public class Planet : MonoBehaviour
     [HideInInspector]
     public bool colourSettingsFoldout;
 
-    private void Start()
-    {
-        GeneratePlanet();
-    }
-
     void Initialize()
     {
         shapeGenerator.UpdateSettings(shapeSettings);
@@ -55,8 +50,10 @@ public class Planet : MonoBehaviour
                 meshObj.AddComponent<MeshRenderer>();
 
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
-                meshFilters[i].sharedMesh = new Mesh();
             }
+
+            meshFilters[i].sharedMesh = new Mesh();
+
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colourSettings.planetMaterial;
 
             terrainFaces[i] = new TerrainFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
@@ -86,6 +83,7 @@ public class Planet : MonoBehaviour
         if (autoUpdate)
         {
             Initialize();
+            GenerateMesh();
             GenerateColours();
         }
     }
