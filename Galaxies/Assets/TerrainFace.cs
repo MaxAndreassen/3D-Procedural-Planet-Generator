@@ -26,7 +26,7 @@ public class TerrainFace
         var vertices = new Vector3[resolution * resolution];
         var triangles = new int[(resolution - 1) * (resolution - 1) * 6];
         var triIndex = 0;
-        var uv = mesh.uv;
+        var uv = (mesh.uv.Length == vertices.Length) ? mesh.uv : new Vector2[vertices.Length];
 
         for (var y = 0; y < resolution; y++)
         {
@@ -37,7 +37,9 @@ public class TerrainFace
                 var pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
                 var pointOnUnitSphere = pointOnUnitCube.normalized;
 
-                vertices[i] = shapeGenerator.CalculatePointOnPlanet(pointOnUnitSphere);
+                var unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);
+                vertices[i] = pointOnUnitSphere * shapeGenerator.GetScaledElevation(unscaledElevation);
+                uv[i].y = unscaledElevation;
 
                 if (x != resolution - 1 && y != resolution - 1)
                 {
@@ -63,7 +65,7 @@ public class TerrainFace
 
     public void UpdateUVs(ColourGenerator colourGenerator)
     {
-        var uv = new Vector2[resolution * resolution];
+        var uv = mesh.uv;
 
         for (var y = 0; y < resolution; y++)
         {
@@ -74,7 +76,7 @@ public class TerrainFace
                 var pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
                 var pointOnUnitSphere = pointOnUnitCube.normalized;
 
-                uv[i] = new Vector2(colourGenerator.BiomePercentFromPoint(pointOnUnitSphere), 0);
+                uv[i].x = colourGenerator.BiomePercentFromPoint(pointOnUnitSphere);
             }
         }
         mesh.uv = uv;
