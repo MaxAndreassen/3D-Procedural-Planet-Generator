@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 987bd7165505a472a8394e52940578a5, type: 3}
-  m_Name: Shape
+  m_Name: Earth_Shape
   m_EditorClassIdentifier: 
   planetRadius: 4
   noiseLayers:

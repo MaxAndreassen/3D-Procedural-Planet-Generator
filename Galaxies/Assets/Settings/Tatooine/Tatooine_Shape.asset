@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987bd7165505a472a8394e52940578a5, type: 3}
   m_Name: Tatooine_Shape
   m_EditorClassIdentifier: 
-  planetRadius: 3.2
+  planetRadius: 5
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
