@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7075607901021715398}
   - component: {fileID: 7075607901021715393}
+  - component: {fileID: -4185986113526886276}
   m_Layer: 0
   m_Name: Tatooine
   m_TagString: Untagged
@@ -57,3 +58,16 @@ MonoBehaviour:
   - {fileID: 0}
   shapeSettingsFoldout: 1
   colourSettingsFoldout: 1
+--- !u!114 &-4185986113526886276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075607901021715392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2771ce59e842d4484979f0d696481cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
