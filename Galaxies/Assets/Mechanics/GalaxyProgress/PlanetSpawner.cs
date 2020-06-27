@@ -2,6 +2,9 @@
 
 public class PlanetSpawner : MonoBehaviour
 {
+    [HideInInspector]
+    public bool spawned = false;
+
     // Start is called before the first frame update
     public void Spawn(Planet prefab, int roughness)
     {
@@ -13,6 +16,8 @@ public class PlanetSpawner : MonoBehaviour
         );
 
         var instance = Instantiate(prefab);
+
+        spawned = true;
 
         instance.GeneratePlanet();
 
