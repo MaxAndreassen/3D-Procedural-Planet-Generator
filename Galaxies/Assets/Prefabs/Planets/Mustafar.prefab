@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d380d0a669ba43de8d656ff7695be45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 140
+  planetType: 2
+  resolution: 50
   autoUpdate: 1
   faceRenderMask: 0
   shapeSettings: {fileID: 11400000, guid: fa6affe54946b4a36b426638ff16a5d3, type: 2}

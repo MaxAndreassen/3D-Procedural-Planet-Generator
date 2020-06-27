@@ -2,6 +2,15 @@
 
 public class Planet : MonoBehaviour
 {
+    public enum PlanetType
+    {
+        Earth = 1,
+        Lava = 2,
+        Desert = 3
+    }
+
+    public PlanetType planetType;
+
     [Range(2, 256)]
     public int resolution = 10;
     public bool autoUpdate = true;

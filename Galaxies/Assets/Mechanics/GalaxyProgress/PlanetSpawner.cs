@@ -2,11 +2,16 @@
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public Planet prefab;
-
     // Start is called before the first frame update
-    void Start()
+    public void Spawn(Planet prefab, int roughness)
     {
+        transform.localPosition = new Vector3
+        (
+            transform.localPosition.x + Random.Range(-roughness, roughness),
+            transform.localPosition.y,
+            transform.localPosition.z + Random.Range(-roughness, roughness)
+        );
+
         var instance = Instantiate(prefab);
 
         instance.GeneratePlanet();
