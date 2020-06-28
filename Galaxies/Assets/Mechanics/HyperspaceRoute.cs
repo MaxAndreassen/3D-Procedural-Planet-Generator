@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class HyperspaceRoute : MonoBehaviour
 {
+    public List<SelectablePlanet> Planets = new List<SelectablePlanet>();
+
     public float width;
 
     public void Update()
@@ -10,9 +14,21 @@ public class HyperspaceRoute : MonoBehaviour
 
         if (string.IsNullOrEmpty(SelectablePlanet.selectedUuid))
         {
-            mesh.Clear();
+            if (Planets.Count < 2)
+            {
+                Planets.Clear();
+                mesh.Clear();
+            }
             return;
         }
+
+        if (!Planets.Any(p => p.uuid == SelectablePlanet.selectedUuid))
+        {
+            Planets.Add(((SelectablePlanet[])GameObject.FindObjectsOfType(typeof(SelectablePlanet)))
+                .First(p => p.uuid == SelectablePlanet.selectedUuid));
+        }
+
+        Debug.Log("here");
 
         var vertices = new Vector3[4];
         var triangles = new int[6];
@@ -20,6 +36,7 @@ public class HyperspaceRoute : MonoBehaviour
         var position1 = SelectablePlanet.selectedPosition;
         var position2 = Input.mousePosition;
         position2 = Camera.main.ScreenToWorldPoint(position2);
+        position2.y = 0;
 
         vertices[0] = position1 + new Vector3(width, 0, 0);
         vertices[1] = position1 + new Vector3(-width, 0, 0);

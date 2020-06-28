@@ -3,9 +3,8 @@
     <Files>
       <File FileName="Assets/Mechanics/Procedural_Planet/ShapeGenerator.cs" Line="40" Column="51" />
       <File FileName="Assets/Mechanics/Procedural_Planet/Planet.cs" Line="126" Column="1" />
-      <File FileName="Assets/Mechanics/Procedural_Planet/TerrainFace.cs" Line="64" Column="6" />
+      <File FileName="Assets/Mechanics/Procedural_Planet/TerrainFace.cs" Line="47" Column="66" />
       <File FileName="Assets/Mechanics/Procedural_Planet/ShapeSettings.cs" Line="2" Column="1" />
-      <File FileName="Assets/Mechanics/Sandbox/Rotate.cs" Line="16" Column="28" />
       <File FileName="Assets/Mechanics/GalaxyProgress/PlanetSpawnController.cs" Line="98" Column="1" />
       <File FileName="Assets/Mechanics/GalaxyProgress/PlanetSpawner.cs" Line="28" Column="65" />
       <File FileName="Assets/Mechanics/Procedural_Planet/NoiseFilterFactory.cs" Line="1" Column="1" />
@@ -15,10 +14,18 @@
       <File FileName="Assets/Mechanics/GalaxyProgress/InitialSpawn.cs" Line="10" Column="6" />
       <File FileName="Assets/Mechanics/Selectable.cs" Line="18" Column="41" />
       <File FileName="Assets/Mechanics/SelectablePlanet.cs" Line="11" Column="22" />
-      <File FileName="Assets/Mechanics/HyperspaceRoute.cs" Line="15" Column="36" />
+      <File FileName="Assets/Mechanics/HyperspaceRoute.cs" Line="15" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Galaxies" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="Galaxies" expanded="True" selected="True" />
         </State>

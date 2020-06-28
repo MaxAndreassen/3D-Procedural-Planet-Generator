@@ -21,7 +21,7 @@ public class Selectable : MonoBehaviour
         else
         {
             selectedUuid = uuid;
-            selectedPosition = transform.position;
+            selectedPosition = transform.localPosition;
         }
     }
 
