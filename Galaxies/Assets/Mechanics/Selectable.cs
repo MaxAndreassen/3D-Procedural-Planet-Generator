@@ -5,6 +5,8 @@ public class Selectable : MonoBehaviour
 {
     public static string selectedUuid;
 
+    public static Vector3 selectedPosition;
+
     public string uuid;
 
     public GameObject selectImage;
@@ -12,9 +14,15 @@ public class Selectable : MonoBehaviour
     public void ToggleSelection()
     {
         if (selectedUuid == uuid)
-            selectedUuid = new Guid().ToString();
+        {
+            selectedUuid = string.Empty;
+            selectedPosition = Vector3.zero;
+        }
         else
+        {
             selectedUuid = uuid;
+            selectedPosition = transform.position;
+        }
     }
 
     public void Initialise()
