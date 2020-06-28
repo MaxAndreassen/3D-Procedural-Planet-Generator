@@ -276,6 +276,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3154919353912749953, guid: 8ef438ca2da154335966463e1a5823be, type: 3}
+--- !u!114 &189151281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9185168343292740449, guid: 2da653ebf2cbc432a8ebc120948a04c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2126125278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189151277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51366c354ea12415782a7a6104a94ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231102147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7197673626018376795, guid: 2da653ebf2cbc432a8ebc120948a04c9,
@@ -295,6 +307,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8240631495254241837, guid: 4798f339e00014401b75f390353e3729, type: 3}
+--- !u!114 &231102151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9185168343292740449, guid: 2da653ebf2cbc432a8ebc120948a04c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 61942053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231102147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51366c354ea12415782a7a6104a94ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471827853
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +607,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7075607901021715393, guid: 289f5f266701d4251979a8996b9a26d1, type: 3}
+--- !u!114 &820545199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9185168343292740449, guid: 2da653ebf2cbc432a8ebc120948a04c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1128774746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820545195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51366c354ea12415782a7a6104a94ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &929559983
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,8 +1001,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b0869f707204894b77376ce90b7080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Planets: []
-  width: 10
+  Planets:
+  - {fileID: 189151281}
+  - {fileID: 231102151}
+  - {fileID: 820545199}
+  - {fileID: 189151281}
+  width: 1
 --- !u!23 &1499343527
 MeshRenderer:
   m_ObjectHideFlags: 0
