@@ -24,5 +24,8 @@ public class PlanetSpawner : MonoBehaviour
         instance.transform.parent = transform;
 
         instance.transform.localPosition = Vector3.zero;
+
+        gameObject.AddComponent<SphereCollider>().radius = 4.5f;
+
     }
 }

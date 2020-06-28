@@ -96,8 +96,6 @@ public class PlanetSpawnController : MonoBehaviour
             {
                 float ratio = (keyValuePair.Value / maxRatio) + ratioModifier;
 
-                Debug.Log(i.ToString() + " - " + randomValue.ToString() + " - " + ratio.ToString() + keyValuePair.Key.ToString());
-
                 ratioModifier += ratio;
 
                 if (randomValue < ratio)
