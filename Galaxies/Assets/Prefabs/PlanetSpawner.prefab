@@ -188,6 +188,8 @@ GameObject:
   - component: {fileID: 7197673626018376794}
   - component: {fileID: 7197673626018376797}
   - component: {fileID: 9185168343292740449}
+  - component: {fileID: 6388675083401485907}
+  - component: {fileID: 6482914544128683570}
   m_Layer: 0
   m_Name: PlanetSpawner
   m_TagString: Untagged
@@ -224,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawned: 0
+  planet: {fileID: 0}
 --- !u!114 &9185168343292740449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +241,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uuid: 
   selectImage: {fileID: 5551335554423004630}
+--- !u!114 &6388675083401485907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197673626018376795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c416ac449eb5a4f9087fa244ed16118f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6482914544128683570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197673626018376795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ec07f3be3b445aeaebbc8a6dc1bc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetSpawnerPrefab: {fileID: 7197673626018376797}
+  maxDistance: 60
+  minDistance: 23
+  maxNeighbours: 4
 --- !u!1 &7197673626549499579
 GameObject:
   m_ObjectHideFlags: 0

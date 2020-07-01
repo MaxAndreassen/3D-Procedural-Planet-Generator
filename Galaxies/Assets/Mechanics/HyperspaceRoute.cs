@@ -3,16 +3,14 @@ using UnityEngine;
 
 public class HyperspaceRoute : MonoBehaviour
 {
-    public List<SelectablePlanet> Planets = new List<SelectablePlanet>();
+    public List<HyperspaceDestination> Planets = new List<HyperspaceDestination>();
 
     public float width;
 
-    public void Start()
-    {
-    }
-
     public void Update()
     {
+        gameObject.GetComponent<MeshFilter>().sharedMesh = new Mesh();
+
         var mesh = gameObject.GetComponent<MeshFilter>().sharedMesh;
 
         var vertices = new Vector3[Planets.Count * 4];

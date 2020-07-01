@@ -5,6 +5,8 @@ public class PlanetSpawner : MonoBehaviour
     [HideInInspector]
     public bool spawned = false;
 
+    public Planet planet;
+
     // Start is called before the first frame update
     public void Spawn(Planet prefab, int roughness)
     {
@@ -24,6 +26,8 @@ public class PlanetSpawner : MonoBehaviour
         instance.transform.parent = transform;
 
         instance.transform.localPosition = Vector3.zero;
+
+        planet = instance;
 
         var comp = gameObject.AddComponent<SphereCollider>();
         comp.radius = 4.5f;

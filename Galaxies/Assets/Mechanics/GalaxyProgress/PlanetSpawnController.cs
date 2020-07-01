@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using static Planet;
 
@@ -20,7 +18,7 @@ public class PlanetSpawnController : MonoBehaviour
     Dictionary<PlanetType, float> planetsDictionary = new Dictionary<PlanetType, float>();
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         SpawnSpawners();
         RandomizeSpawners();
@@ -121,5 +119,5 @@ public class PlanetSpawnController : MonoBehaviour
 
             i++;
         }
-    }
+    }*/
 }
