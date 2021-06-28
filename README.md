@@ -1,5 +1,5 @@
 # Galaxies
-A simulation of galactic proportions! This Unity C# project enables you to programmatically generate realistic, textured, 3 dimensional planets with multiple biomes and terrains.
+This Unity C# project enables you to programmatically generate realistic, textured, 3 dimensional planets with multiple biomes and terrains.
 
 This is built on top of the Unity (www.unity.com) game engine.
 
